@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tallow & Spice — handmade tallow skin essentials, made in small batches on the Central Coast NSW.">
+<title>Tallow & Spice | Old Fashioned Goodness For Modern Skin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="#">Tallow <i>&</i> Spice</a>
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+  <nav>
+    <a href="#shop">Shop</a><a href="#story">Our Story</a><a href="#why">Why Tallow</a><a href="#contact">Contact</a>
+    <a href="#cart" onclick="openCart()">Cart <b id="count">0</b></a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">Handmade in small batches · Central Coast NSW</p>
+    <h1>Old fashioned goodness for modern skin.</h1>
+    <p class="lead">Simple, nourishing tallow skin essentials made with carefully chosen ingredients and a whole lot of care.</p>
+    <a class="button" href="#shop">Shop the collection</a>
+  </div>
+  <div class="hero-art"><div class="label">T&S<br><small>TALLOW & SPICE</small></div></div>
+</section>
+
+<section id="shop" class="section">
+  <div class="intro"><p class="eyebrow">The collection</p><h2>Skin essentials, made simply.</h2><p>Explore our handmade tallow range.</p></div>
+  <div class="grid">
+    <article class="card"><div class="art">BODY<br>BUTTER</div><h3>Unscented Tallow Body Butter</h3><p>Rich, simple and deeply moisturising.</p><strong>$25</strong><button onclick="add('Unscented Tallow Body Butter',25)">Add to cart</button></article>
+    <article class="card"><div class="art">TALLOW<br>SOAP</div><h3>Natural Tallow Soap</h3><p>Cold processed and creamy for everyday cleansing.</p><strong>$6</strong><button onclick="add('Natural Tallow Soap',6)">Add to cart</button></article>
+    <article class="card"><div class="art">FACE<br>CREAM</div><h3>Tallow Face Cream</h3><p>A nourishing daily moisturiser.</p><strong>$30</strong><button onclick="add('Tallow Face Cream',30)">Add to cart</button></article>
+    <article class="card"><div class="art">LIP<br>BALM</div><h3>Tallow Lip Balm</h3><p>Comforting moisture for dry lips.</p><strong>$10</strong><button onclick="add('Tallow Lip Balm',10)">Add to cart</button></article>
+    <article class="card"><div class="art">PAW<br>BALM</div><h3>Tallow Paw Balm</h3><p>A rich balm for hardworking paws.</p><strong>$15</strong><button onclick="add('Tallow Paw Balm',15)">Add to cart</button></article>
+    <article class="card"><div class="art">LIQUID<br>GOLD</div><h3>Liquid Gold Face Oil</h3><p>A nourishing botanical oil blend.</p><strong>$30</strong><button onclick="add('Liquid Gold Face Oil',30)">Add to cart</button></article>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div><p class="eyebrow">Where it starts</p><h2>From grass-fed suet to skin-loving tallow.</h2>
+  <p>Our tallow begins with locally sourced, grass-fed beef suet. It is carefully rendered and purified before becoming part of our small-batch skin essentials.</p>
+  <p>We keep our formulas purposeful: nourishing ingredients, thoughtful formulations and no unnecessary extras.</p></div>
+  <div class="facts"><b>100%</b><span>beef suet</span><b>Small</b><span>batches</span><b>Central Coast</b><span>NSW</span></div>
+</section>
+
+<section id="why" class="section pale">
+  <div class="intro"><p class="eyebrow">Why tallow?</p><h2>Simple skincare, inspired by tradition.</h2></div>
+  <div class="benefits"><div><b>01</b><h3>Rich & nourishing</h3><p>Tallow is naturally rich in skin-compatible lipids and gives our products their distinctive feel.</p></div>
+  <div><b>02</b><h3>Purposeful formulas</h3><p>We focus on straightforward ingredients selected for the job they need to do.</p></div>
+  <div><b>03</b><h3>Made with care</h3><p>Every batch is made, filled and finished by hand.</p></div></div>
+</section>
+
+<section id="contact" class="contact"><p class="eyebrow">Come say hello</p><h2>Handmade on the Central Coast.</h2><p>Find Tallow & Spice online, at selected local stockists and at markets.</p><a class="button" href="mailto:contact@tallowandspice.com.au">Contact us</a></section>
+
+<footer><strong>Tallow & Spice</strong><span>Old Fashioned Goodness For Modern Skin</span><span>© <span id="year"></span> Tallow & Spice</span></footer>
+
+<aside id="cart"><div class="carthead"><h2>Your cart</h2><button onclick="closeCart()">×</button></div><div id="items"><p>Your cart is empty.</p></div><div class="total"><span>Total</span><b id="total">$0.00</b></div><button class="checkout" onclick="checkout()">Continue to checkout</button><small>Square checkout will be connected here.</small></aside>
+<div id="shade" onclick="closeCart()"></div>
+<script src="script.js"></script>
+</body></html>
